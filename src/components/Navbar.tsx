@@ -10,7 +10,7 @@ const Navbar = () => {
       <MaxWidthWrapper>
         <div className="flex h-14 items-center justify-between border-b border-zinc-200">
           <Link href="/" className="flex z-40 font-semibold">
-            <span>quill.</span>
+            <span>ChobsPDF.</span>
           </Link>
 
           {/* todo: add mobile logo */}
@@ -26,7 +26,6 @@ const Navbar = () => {
                 Pricing
               </Link>
               <LoginLink
-                href="/pricing"
                 className={buttonVariants({
                   variant: "ghost",
                   size: "sm",
@@ -35,7 +34,6 @@ const Navbar = () => {
                 Sign In
               </LoginLink>
               <RegisterLink
-                href="/pricing"
                 className={buttonVariants({
                   size: "sm",
                 })}
