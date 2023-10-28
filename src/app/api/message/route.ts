@@ -1,7 +1,7 @@
 import { db } from "@/db";
 import { openai } from "@/lib/openai";
 import { getPineconeClient } from "@/lib/pinecone";
-import { SendMessageValidator } from "@/lib/validators/SendMessageValidator";
+import { sendMessageValidator } from "@/lib/validators/SendMessageValidator";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { OpenAIEmbeddings } from "langchain/embeddings/openai";
 import { PineconeStore } from "langchain/vectorstores/pinecone";
@@ -21,7 +21,7 @@ export const POST = async (req: NextRequest) => {
 
   if (!userId) return new Response("Unauthorized", { status: 401 });
 
-  const { fileId, message } = SendMessageValidator.parse(body);
+  const { fileId, message } = sendMessageValidator.parse(body);
 
   const file = await db.file.findFirst({
     where: {
@@ -49,6 +49,7 @@ export const POST = async (req: NextRequest) => {
   const pinecone = await getPineconeClient();
   const pineconeIndex = pinecone.Index("quill");
 
+  // @ts-ignore
   const vectorStore = await PineconeStore.fromExistingIndex(embeddings, {
     pineconeIndex,
     namespace: file.id,
