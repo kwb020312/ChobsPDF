@@ -5,7 +5,7 @@ import { createUploadthing, type FileRouter } from "uploadthing/next";
 import { PDFLoader } from "langchain/document_loaders/fs/pdf";
 import { OpenAIEmbeddings } from "langchain/embeddings/openai";
 import { PineconeStore } from "langchain/vectorstores/pinecone";
-import { getPineconeClient, pinecone } from "@/lib/pinecone";
+import { getPineconeClient } from "@/lib/pinecone";
 
 const f = createUploadthing();
 
