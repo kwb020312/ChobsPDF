@@ -31,7 +31,10 @@ const ChatInput = ({ isDisabled }: ChatInputProps) => {
                   if (e.key === "Enter" && !e.shiftKey) {
                     e.preventDefault();
 
-                    addMessage();
+                    // 임시 비활성화
+                    // addMessage();
+
+                    alert("임시 비활성화");
 
                     textareaRef.current?.focus();
                   }
