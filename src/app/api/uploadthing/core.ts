@@ -42,6 +42,8 @@ export const ourFileRouter = {
 
         const pagesAmt = pageLevelDocs.length;
 
+        // if()
+
         const pinecone = await getPineconeClient();
 
         const pineconeIndex = pinecone.Index("chobspdf");
