@@ -37,7 +37,9 @@ const Dashboard = ({ subscriptionPlan }: PageProps) => {
   return (
     <main className="mx-auto max-w-7xl md:p-10">
       <div className="mt-8 flex flex-col items-start justify-between gap-4 border-b border-gray-200 pb-5 sm:flex-row sm:items-center sm:gap-0">
-        <h1 className="mb-3 font-bold text-5xl text-gray-900">My Files</h1>
+        <h1 className="mb-3 font-bold text-5xl text-gray-900 break-keep">
+          PDF 목록
+        </h1>
 
         <UploadButton isSubscribed={subscriptionPlan.isSubscribed} />
       </div>
@@ -80,7 +82,6 @@ const Dashboard = ({ subscriptionPlan }: PageProps) => {
 
                   <div className="">
                     <MessageSquare className="h-4 w-4" />
-                    mocked
                   </div>
 
                   <Button
@@ -104,8 +105,10 @@ const Dashboard = ({ subscriptionPlan }: PageProps) => {
       ) : (
         <div className="mt-16 flex flex-col items-center gap-2">
           <Ghost className="h-8 w-8 text-zinc-800" />
-          <h3 className="font-semibold text-xl">Pretty empty around here</h3>
-          <p>Let&apos;s upload your first PDF.</p>
+          <h3 className="font-semibold text-xl break-keep">
+            아직 아무 파일도 업로드 되지 않았어요 😥
+          </h3>
+          <p>PDF를 업로드해주세요.</p>
         </div>
       )}
     </main>

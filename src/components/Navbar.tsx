@@ -34,7 +34,7 @@ const Navbar = () => {
                     size: "sm",
                   })}
                 >
-                  Pricing
+                  요금제 알아보기
                 </Link>
                 <LoginLink
                   className={buttonVariants({
@@ -42,14 +42,14 @@ const Navbar = () => {
                     size: "sm",
                   })}
                 >
-                  Sign In
+                  로그인
                 </LoginLink>
                 <RegisterLink
                   className={buttonVariants({
                     size: "sm",
                   })}
                 >
-                  Get started <ArrowRight className="ml-1.5 h-5 w-5" />
+                  회원가입 <ArrowRight className="ml-1.5 h-5 w-5" />
                 </RegisterLink>
               </>
             ) : (
@@ -61,12 +61,12 @@ const Navbar = () => {
                     size: "sm",
                   })}
                 >
-                  Dashboard
+                  PDF 목록
                 </Link>
                 <UserAccountNav
                   name={
                     !user.given_name || !user.family_name
-                      ? "Your Account"
+                      ? "내 정보"
                       : `${user.given_name} ${user.family_name}`
                   }
                   email={user.email ?? ""}

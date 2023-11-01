@@ -96,15 +96,17 @@ const UploadDropzone = ({ isSubscribed }: { isSubscribed: boolean }) => {
               <div className="flex flex-col items-center justify-center pt-5 pb-6">
                 <Cloud className="h-6 w-6 text-zinc-500 mb-2" />
                 <p className="mb-2 text-sm text-zinc-700">
-                  <span className="font-semibold">Click to upload</span> or drag
-                  and drop
+                  <span className="font-semibold">
+                    버튼을 눌러 업로드하거나
+                  </span>{" "}
+                  파일을 드래그&드롭해주세요😉
                 </p>
                 <p className="text-xs text-zinc-500">
-                  PDF (up to {isSubscribed ? "16" : "4"}MB)
+                  최대 업로드 가능 용량 PDF ({isSubscribed ? "16" : "4"}MB)
                 </p>
               </div>
 
-              {acceptedFiles && acceptedFiles[0] ? (
+              {acceptedFiles && acceptedFiles[0] && (
                 <div className="max-w-xs bg-white flex items-center rounded-md overflow-hidden outline outline-[1px] outline-zinc-200 divide-x divide-zinc-200">
                   <div className="px-3 py-2 h-full grid place-items-center">
                     <File className="h-4 w-4 text-blue-500" />
@@ -113,9 +115,9 @@ const UploadDropzone = ({ isSubscribed }: { isSubscribed: boolean }) => {
                     {acceptedFiles[0].name}
                   </div>
                 </div>
-              ) : null}
+              )}
 
-              {isUploading ? (
+              {isUploading && (
                 <div className="w-full mt-4 max-w-xs mx-auto">
                   <Progress
                     indicatorColor={
@@ -124,14 +126,14 @@ const UploadDropzone = ({ isSubscribed }: { isSubscribed: boolean }) => {
                     value={uploadProgress}
                     className="h-1 w-full bg-zinc-200"
                   />
-                  {uploadProgress === 100 ? (
+                  {uploadProgress === 100 && (
                     <div className="flex gap-1 items-center justify-center text-sm text-zinc-700 text-center pt-2">
                       <Loader2 className="h-3 w-3 animate-spin" />
-                      Redirecting...
+                      문서로 이동 중📑...
                     </div>
-                  ) : null}
+                  )}
                 </div>
-              ) : null}
+              )}
 
               <input
                 {...getInputProps()}
@@ -159,7 +161,7 @@ const UploadButton = ({ isSubscribed }: { isSubscribed: boolean }) => {
       }}
     >
       <DialogTrigger onClick={() => setIsOpen(true)} asChild>
-        <Button>Upload PDF</Button>
+        <Button>PDF 등록</Button>
       </DialogTrigger>
 
       <DialogContent>

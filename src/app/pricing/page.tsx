@@ -21,53 +21,53 @@ const page = () => {
   const pricingItems = [
     {
       plan: "Free",
-      tagline: "For small side projects.",
+      tagline: "작은 규모의 프로젝트에 적합합니다.",
       quota: 10,
       features: [
         {
-          text: "5 pages per PDF",
-          footnote: "The maximum amount of pages per PDF-file.",
+          text: "최대 5페이지 PDF 업로드",
+          footnote: "5페이지 이하의 PDF만 업로드 가능",
         },
         {
-          text: "4MB file size limit",
-          footnote: "The maximum file size of a single PDF file.",
+          text: "가벼운 용량의 PDF 업로드",
+          footnote: "최대 4MB의 PDF 업로드 가능",
         },
         {
-          text: "Mobile-friendly interface",
+          text: "모바일 반응형 UI 지원",
         },
         {
-          text: "Higher-quality responses",
-          footnote: "Better algorithmic responses for enhanced content quality",
+          text: "양질의 데이터 호출",
+          footnote: "높은 품질의 AI 답변",
           negative: true,
         },
         {
-          text: "Priority support",
+          text: "데이터 보안 활성화",
           negative: true,
         },
       ],
     },
     {
       plan: "Pro",
-      tagline: "For larger projects with higher needs.",
+      tagline: "대규모 프로젝트에 적합합니다.",
       quota: PLANS.find((p) => p.slug === "pro")!.quota,
       features: [
         {
-          text: "25 pages per PDF",
-          footnote: "The maximum amount of pages per PDF-file.",
+          text: "최대 25페이지 PDF 업로드",
+          footnote: "25페이지까지 PDF 업로드 가능",
         },
         {
-          text: "16MB file size limit",
-          footnote: "The maximum file size of a single PDF file.",
+          text: "대용량의 PDF 업로드",
+          footnote: "최대 16MB의 PDF 업로드 가능",
         },
         {
-          text: "Mobile-friendly interface",
+          text: "모바일 반응형 UI 지원",
         },
         {
-          text: "Higher-quality responses",
-          footnote: "Better algorithmic responses for enhanced content quality",
+          text: "양질의 데이터 호출",
+          footnote: "높은 품질의 AI 답변",
         },
         {
-          text: "Priority support",
+          text: "데이터 보안 활성화",
         },
       ],
     },
@@ -77,10 +77,10 @@ const page = () => {
     <>
       <MaxWidthWrapper className="mb-8 mt-24 text-center max-w-5xl">
         <div className="mx-auto mb-10 sm:max-w-lg">
-          <h1 className="text-6xl font-bold sm:text-7xl">Pricing</h1>
-          <p className="mt-5 text-gray-600 sm:text-lg">
-            Whether you&aqos;re just trying out our service or need more, we
-            &aqos;ve got you covered.
+          <h1 className="text-6xl font-bold sm:text-7xl">요금제</h1>
+          <p className="mt-5 text-gray-600 sm:text-lg break-keep">
+            ChobsPDF 서비스가 맘에 드신다면 요금제를 업그레이드하여 더욱
+            편리하게 이용해보세요
           </p>
         </div>
 
@@ -101,7 +101,7 @@ const page = () => {
                 >
                   {plan === "Pro" && (
                     <div className="absolute -top-5 left-0 right-0 mx-auto w-32 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 px-3 py-2 text-sm font-medium text-white">
-                      Upgrade now
+                      PRO
                     </div>
                   )}
 
@@ -113,19 +113,19 @@ const page = () => {
                     <p className="my-5 font-display text-6xl font-semibold">
                       ${price}
                     </p>
-                    <p className="text-gray-500">per month</p>
+                    <p className="text-gray-500">30일 기준</p>
                   </div>
 
                   <div className="flex h-20 items-center justify-center border-b border-t border-gray-200 bg-gray-50">
                     <div className="flex items-center space-x-1">
-                      <p>{quota.toLocaleString()} PDFs/mo included</p>
+                      <p>{quota.toLocaleString()}번의 PDF 업로드 기능</p>
 
                       <Tooltip delayDuration={300}>
                         <TooltipTrigger className="cursor-default ml-1.5">
                           <HelpCircle className="h-4 w-4 text-zinc-500" />
                         </TooltipTrigger>
                         <TooltipContent className="w-80 p-2">
-                          How many PDFs you can upload per month.
+                          1달마다 업로드 가능한 PDF
                         </TooltipContent>
                       </Tooltip>
                     </div>
@@ -190,7 +190,7 @@ const page = () => {
                           className: "w-full",
                         })}
                       >
-                        {user ? "Upgrade now" : "Sign up"}
+                        {user ? "지금 업그레이드" : "회원가입"}
                         <ArrowRight className="h-5 w-5 ml-1.5" />
                       </Link>
                     )}

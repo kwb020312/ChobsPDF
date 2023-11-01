@@ -39,7 +39,7 @@ const MobileNav = ({ isAuth }: { isAuth: boolean }) => {
                     className="flex items-center w-full font-semibold text-green-600"
                     href="/sign-up"
                   >
-                    Get started <ArrowRight className="ml-2 h-5 w-5" />
+                    회원가입 <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </li>
                 <li className="my-3 h-px w-full bg-gray-300" />
@@ -49,7 +49,7 @@ const MobileNav = ({ isAuth }: { isAuth: boolean }) => {
                     className="flex items-center w-full font-semibold"
                     href="/sign-in"
                   >
-                    Sign in
+                    로그인
                   </Link>
                 </li>
                 <li className="my-3 h-px w-full bg-gray-300" />
@@ -59,7 +59,7 @@ const MobileNav = ({ isAuth }: { isAuth: boolean }) => {
                     className="flex items-center w-full font-semibold"
                     href="/pricing"
                   >
-                    Pricing
+                    요금제 알아보기
                   </Link>
                 </li>
               </>
@@ -71,7 +71,7 @@ const MobileNav = ({ isAuth }: { isAuth: boolean }) => {
                     className="flex items-center w-full font-semibold"
                     href="/dashboard"
                   >
-                    Dashboard
+                    PDF 목록
                   </Link>
                 </li>
                 <li className="my-3 h-px w-full bg-gray-300" />
@@ -80,7 +80,7 @@ const MobileNav = ({ isAuth }: { isAuth: boolean }) => {
                     className="flex items-center w-full font-semibold"
                     href="/sign-out"
                   >
-                    Sign out
+                    로그아웃
                   </Link>
                 </li>
               </>

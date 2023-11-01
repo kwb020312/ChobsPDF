@@ -10,16 +10,16 @@ export default function Home() {
       <MaxWidthWrapper className="mb-12 mt-28 sm:mt-40 flex flex-col items-center justify-center text-center">
         <div className="mx-auto mb-4 flex max-w-fit items-center justify-center space-x-2 overflow-hidden rounded-full border border-gray-200 bg-white px-7 py-2 shadow-md backdrop-blur transition-all hover:border-gray-300 hover:bg-white/50">
           <p className="text-sm font-semibold text-gray-700">
-            Quill is now public!
+            ChobsPDF를 통해 효율적인 업무 진행
           </p>
         </div>
-        <h1 className="max-w-4xl text-5xl font-bold md:text-6xl lg:text-7xl">
-          Chat with your <span className="text-blue-600">documents</span> in
-          seconds.
+        <h1 className="max-w-4xl text-5xl font-bold md:text-6xl lg:text-7xl break-keep">
+          내 <span className="text-blue-600">문서에게</span> 궁금한 점을
+          질문하세요!
         </h1>
-        <p className="mt-5 max-w-prose text-zinc-700 sm:text-lg">
-          Quill allows you to have conversations with any PDF document. Simply
-          upload your file and start asking questions right away.
+        <p className="mt-5 max-w-prose text-zinc-700 sm:text-lg break-keep">
+          느릿느릿한 PDF 업로드 속도, 불편한 UI, 한줄 한줄 읽으며 정리하는
+          업무는 이제 그만!
         </p>
         <Link
           className={buttonVariants({
@@ -29,7 +29,7 @@ export default function Home() {
           href="/dashboard"
           target="_blank"
         >
-          Get started <ArrowRight className="ml-2 h-5 w-5" />
+          바로 질문하기 <ArrowRight className="ml-2 h-5 w-5" />
         </Link>
       </MaxWidthWrapper>
       {/* value proposition section */}
@@ -53,7 +53,7 @@ export default function Home() {
               <div className="mt-16 flow-root sm:mt-24">
                 <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
                   <Image
-                    src="/dashboard-preview.jpg"
+                    src="/dashboard-preview.png"
                     alt="product preview"
                     width={1364}
                     height={866}
@@ -84,11 +84,11 @@ export default function Home() {
       <div className="mx-auto mb-32 mt-32 max-w-5xl sm:mt-56">
         <div className="mb-12 px-6 lg:px-8">
           <div className="mx-auto max-w-2xl sm:text-center">
-            <h2 className="mt-2 font-bold text-4xl text-gray-900 sm:text-5xl">
-              Start chatting in minutes
+            <h2 className="mt-2 font-bold text-4xl text-gray-900 sm:text-5xl break-keep">
+              바로 대화해보세요
             </h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Chatting to your PDF files has never been easier than with Quill.
+            <p className="mt-4 text-lg text-gray-600 break-keep">
+              그 어떤 방법보다 쉽고 빠르게 원하는 정보를 얻을 수 있어요
             </p>
           </div>
         </div>
@@ -98,18 +98,18 @@ export default function Home() {
           <li className="md:flex-1">
             <div className="flex flex-col space-y-2 border-l-4 border-zinc-300 py-2 pl-4 md:border-l-0 md:border-t-2 md:pb-0 md:pl-0 md:pt-4">
               <span className="text-sm font-medium text-blue-600">Step 1</span>
-              <span className="text-xl font-semibold">
-                Sign up for an account
+              <span className="text-xl font-semibold break-keep">
+                계정을 등록해주세요
               </span>
-              <span className="mt-2 text-zinc-700">
-                Either starting out with a free plan or choose our{" "}
+              <span className="mt-2 text-zinc-700 break-keep">
+                무료로 서비스를 이용해보고, 더 나은 기능을 원할 때{" "}
                 <Link
                   href="/pricing"
                   className="text-blue-700 underline-offset-2"
                 >
-                  pro plan
+                  PRO 서비스
                 </Link>
-                .
+                를 이용해보세요.
               </span>
             </div>
           </li>
@@ -117,11 +117,10 @@ export default function Home() {
             <div className="flex flex-col space-y-2 border-l-4 border-zinc-300 py-2 pl-4 md:border-l-0 md:border-t-2 md:pb-0 md:pl-0 md:pt-4">
               <span className="text-sm font-medium text-blue-600">Step 2</span>
               <span className="text-xl font-semibold">
-                Upload your PDF file
+                PDF 파일을 업로드해주세요
               </span>
-              <span className="mt-2 text-zinc-700">
-                We&apos;ll process your file and make it ready for you to chat
-                with.
+              <span className="mt-2 text-zinc-700 break-keep">
+                소중한 PDF를 업로드해 조회 하는동안 AI 서비스를 준비해둘게요.
               </span>
             </div>
           </li>
@@ -129,11 +128,10 @@ export default function Home() {
             <div className="flex flex-col space-y-2 border-l-4 border-zinc-300 py-2 pl-4 md:border-l-0 md:border-t-2 md:pb-0 md:pl-0 md:pt-4">
               <span className="text-sm font-medium text-blue-600">Step 3</span>
               <span className="text-xl font-semibold">
-                Start asking questions
+                궁금한 것을 질문해보세요
               </span>
-              <span className="mt-2 text-zinc-700">
-                It&apos;s that simple. Try out Quill today - it really takes
-                less than a minute.
+              <span className="mt-2 text-zinc-700 break-keep">
+                필요한 정보를 AI가 답변해 쉽게 PDF 정보를 이해할 수 있을거에요.
               </span>
             </div>
           </li>

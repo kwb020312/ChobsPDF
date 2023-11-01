@@ -33,12 +33,14 @@ const ChatInput = ({ isDisabled }: ChatInputProps) => {
                     // 임시 비활성화
                     // addMessage();
 
-                    alert("임시 비활성화");
+                    alert(
+                      "OpenAI Token이 초과되었어요.. 나중에 다시 시도해주세요."
+                    );
 
                     textareaRef.current?.focus();
                   }
                 }}
-                placeholder="Enter your question..."
+                placeholder="궁금한 점을 질문해보세요!😊"
                 className="resize-none pr-12 text-base py-3 scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch"
               />
 
@@ -47,7 +49,10 @@ const ChatInput = ({ isDisabled }: ChatInputProps) => {
                 className="absolute bottom-1.5 right-[8px]"
                 aria-label="send message"
                 onClick={() => {
-                  addMessage();
+                  // addMessage();
+                  alert(
+                    "OpenAI Token이 초과되었어요.. 나중에 다시 시도해주세요."
+                  );
 
                   textareaRef.current?.focus();
                 }}

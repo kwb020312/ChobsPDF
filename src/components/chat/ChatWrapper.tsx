@@ -29,9 +29,9 @@ const ChatWrapper = ({ fileId }: ChatWrapperProps) => {
         <div className="flex-1 flex justify-center items-center flex-col mb-28">
           <div className="flex flex-col items-center gap-2">
             <Loader2 className="h-8 w-8 text-blue-500 animate-spin" />
-            <h3 className="font-semibold text-xl">Loading...</h3>
+            <h3 className="font-semibold text-xl">로딩중...</h3>
             <p className="text-zinc-500 text-sm">
-              We&apos;re preparing your PDF.
+              빠르게 PDF를 준비해드릴게요😙
             </p>
           </div>
         </div>
@@ -45,8 +45,8 @@ const ChatWrapper = ({ fileId }: ChatWrapperProps) => {
         <div className="flex-1 flex justify-center items-center flex-col mb-28">
           <div className="flex flex-col items-center gap-2">
             <Loader2 className="h-8 w-8 text-blue-500 animate-spin" />
-            <h3 className="font-semibold text-xl">Processing PDF...</h3>
-            <p className="text-zinc-500 text-sm">This won&apos;t take long.</p>
+            <h3 className="font-semibold text-xl">PDF 처리 중...</h3>
+            <p className="text-zinc-500 text-sm">금방 완료될거에요😁.</p>
           </div>
         </div>
         <ChatInput isDisabled />
@@ -59,10 +59,11 @@ const ChatWrapper = ({ fileId }: ChatWrapperProps) => {
         <div className="flex-1 flex justify-center items-center flex-col mb-28">
           <div className="flex flex-col items-center gap-2">
             <XCircle className="h-8 w-8 text-red-500" />
-            <h3 className="font-semibold text-xl">Too many pages in PDF</h3>
+            <h3 className="font-semibold text-xl">
+              업로드 가능한 페이지 수를 초과했어요 😥
+            </h3>
             <p className="text-zinc-500 text-sm">
-              Your <span className="font-medium">Free</span> plan supports up to
-              5 pages per PDF.
+              요금제를 업그레이드 해 업로드 가능 페이지 수를 늘려보세요
             </p>
             <Link
               href="/dashboard"

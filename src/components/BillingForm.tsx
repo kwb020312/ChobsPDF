@@ -46,31 +46,29 @@ const BillingForm = ({ subscriptionPlan }: BillingFormProps) => {
       >
         <Card>
           <CardHeader>
-            <CardTitle>Subscription Plan</CardTitle>
+            <CardTitle>결제정보 관리</CardTitle>
             <CardDescription>
-              You are currently on the <strong>{subscriptionPlan.name}</strong>{" "}
-              plan.
+              회원님은 현재 <strong>{subscriptionPlan.name}</strong> 요금제를
+              이용중입니다.
             </CardDescription>
           </CardHeader>
           <CardFooter className="flex flex-col items-start space-y-2 md:flex-row md:justify-between md:space-x-0">
             <Button type="submit">
-              {isLoading ? (
-                <Loader2 className="mr-4 h-4 w-4 animate-spin" />
-              ) : null}
+              {isLoading && <Loader2 className="mr-4 h-4 w-4 animate-spin" />}
               {subscriptionPlan.isSubscribed
-                ? "Manage Subscription"
-                : "Upgrade to PRO"}
+                ? "결제정보 관리하기"
+                : "PRO 요금제 가입"}
             </Button>
 
-            {subscriptionPlan.isSubscribed ? (
+            {subscriptionPlan.isSubscribed && (
               <p className="rounded-full text-xs font-medium">
                 {subscriptionPlan.isCanceled
-                  ? "Your plan will be canceled on"
-                  : "Your plan renews on"}
+                  ? "요금제 유지가능 기간: "
+                  : "요금제 유지가능 기간: "}
                 {format(subscriptionPlan.stripeCurrentPeriodEnd!, "dd.MM.yyyy")}
                 .
               </p>
-            ) : null}
+            )}
           </CardFooter>
         </Card>
       </form>
